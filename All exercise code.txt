@@ -1,0 +1,82 @@
+//Solution 1
+
+import 'dart:io';
+
+void main() {
+  print("Enter your name");
+  String? name = stdin.readLineSync();
+
+  print("Enter your age");
+  int? age = int.parse(stdin.readLineSync()!);
+
+  int leftage = 100 - age;
+  print("${name} you have ${leftage} years left to become 100 years old");
+}
+
+//Solution 2
+
+import 'dart:io';
+
+void main() {
+  print("enter the number");
+
+  int? num = int.parse(stdin.readLineSync()!);
+
+  if (num % 2 == 0) {
+    print("number is even");
+  } else {
+    print("number is odd");
+  }
+}
+
+//Solution 3
+
+void main() {
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+  for (var i in a) {
+    if (i < 5) {
+      print(i);
+    }
+  }
+}
+
+//Solution 4
+
+import 'dart:io';
+
+void main() {
+  print("enter a number");
+
+  int? num = int.parse(stdin.readLineSync()!);
+
+  //including 1 and number itself
+  for (int i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      print(i);
+    }
+  }
+
+  //excluding 1 and number itself
+  for (int i = 2; i < num; i++) {
+    if (num % i == 0) {
+      print(i);
+    }
+  }
+}
+
+//Solution 5
+
+void main() {
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+  List<int> b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+  Set<int> setA = a.toSet();
+  Set<int> setB = b.toSet();
+
+  Set<int> common = setA.intersection(setB);
+
+  print(common);
+}
+
